@@ -7,8 +7,8 @@ class TableGenerator{
         this.tbody = document.getElementById("tbody");
         this.nbModel = document.getElementById("nbModel");
     }
+    // Generation du tableau
     generateTable(array=this.proc.data){
-        this.actualData=array;
         this.tbody.innerHTML = "";
         array.forEach(cpu => {
             this.tbody.appendChild(this.generateRow(cpu));
