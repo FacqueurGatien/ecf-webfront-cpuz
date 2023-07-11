@@ -1,6 +1,5 @@
-import { EventClass } from "../../EventClass.js";
-
 class TableGenerator{
+    // Constructeur
     constructor(_proc){
         this.proc = _proc;
         this.table = document.getElementById("cpuTable");
@@ -8,6 +7,8 @@ class TableGenerator{
         this.nbModel = document.getElementById("nbModel");
     }
     // Generation du tableau
+    // Ppurge du tableau actuel pour ne pas avoir de duplication
+    // (Re)Generation du tableau et Mise a jour du nombre de modele de processeur
     generateTable(array=this.proc.data){
         this.tbody.innerHTML = "";
         array.forEach(cpu => {
@@ -15,6 +16,7 @@ class TableGenerator{
         });
         this.nbModel.textContent = "Nombre de modèles : " + array.length;
     }
+    // Permet de generer et renvoyer une ligne et d'y ajouter des cellules
     generateRow(cpu){
         let tr = document.createElement("tr");
         for(let spec of cpu.getValues()){
@@ -22,6 +24,7 @@ class TableGenerator{
         }
         return tr;
     }
+    // Permet de generer et renvoyer une cellule et d'y ajouter un contenue
     generateCell(spec){
         let td = document.createElement("td")
         td.textContent = spec;
