@@ -6,33 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CPUZ</title>
     <link rel="stylesheet" href="css/style-cpuz.css">
-    <script src="js/main-cpuz.js" type="module"></script>
+    <script src="./js/main-cpuz.js" type="module"></script>
 </head>
 <body>
     <header>
-        <h1>Liste des CPUs</h1>
-        <img src="img/cpuz.webp">
-        <fieldset>
+        <div id="titleImg">
+            <h1>Liste des CPUs</h1>
+            <img src="img/cpuz.webp">
+        </div>
+        <fieldset id="cpuFieldset">
             <legend>Rechercher un modèle</legend>
-            <input type="search">
+            <input id="searchField" type="search">
         </fieldset>
     </header>
-    <main>
-        <table>
-            <thead>
+    <main id="main">
+        <table id="cpuTable">
+            <thead id="thead">
             <tr>
                 <th>Identifiant</th>
                 <th>Marque</th>
                 <th>Famille</th>
                 <th>Modèle</th>
                 <th>Fréquence (Ghz)</th>
+                <th>Prix</th>
                 <th>Nom complet</th>
             </tr>
             </thead>
+            <tbody id="tbody">
+
+            </tbody>
         </table>
     </main>
     <footer>
-        <p>Nombre de modèles : <span>0</span></p>
+        <p id="nbModel">Nombre de modèles : <span>0</span></p>
     </footer>
 </body>
 </html>

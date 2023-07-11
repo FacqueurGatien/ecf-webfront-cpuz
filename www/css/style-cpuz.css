@@ -23,3 +23,89 @@ body {
 body > header {
     margin-bottom: 2rem;
 }
+
+#titleImg
+{
+    margin: auto;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#titleImg img
+{
+    width: 40rem;
+}
+#titleImg h1
+{
+    margin: auto 0 auto 0;
+}
+#cpuFieldset
+{
+    border-color: var(--secondary-text);
+    width: 80%;
+    margin: auto;
+}
+
+/* Table */
+#main
+{
+    overflow: auto;
+}
+#cpuTable
+{
+    width: 80%;
+    border-collapse: collapse;
+    margin: auto;
+}
+#tbody tr:hover
+{
+    background-color: var(--hover-color);
+}
+#tbody td, #thead th
+{
+    text-align: center;
+    padding: 2rem 0 1rem 1rem;
+    min-width: 14rem;
+    border: 0.1rem solid var(--secondary-text);
+}
+#tbody td:nth-child(1), #tbody td:nth-child(7)
+{
+    text-align: start;
+}
+#thead th
+{
+    cursor: pointer;
+    font-size: 2rem;
+}
+#thead th:hover
+{
+    background-color: var(--hover-color);
+} 
+#nbModel
+{
+    text-align: center;
+}
+
+@media screen and (max-width:1024px)
+{
+    #cpuFieldset
+    {
+        width: 100%;
+    }
+    #cpuTable
+    {
+        width: 100%;
+    }
+    #tbody td, #thead th
+    {
+        font-size: 1rem;
+        padding: 1rem 0 1rem 0;
+        min-width: 1rem;
+    }
+    #titleImg img
+    {
+        width: 20rem;
+    } 
+}
