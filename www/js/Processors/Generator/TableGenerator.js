@@ -31,13 +31,13 @@ class TableGenerator{
     }
     addSortEvent(){
         let translate = [
-            {from:"id",to:"Identifiant"},
-            {from:"brand",to:"Marque"},
-            {from:"family",to:"Famille"},
-            {from:"model",to:"Modèle"},
-            {from:"ghz",to:"Fréquence (Ghz)"},
-            {from:"price",to:"Prix"},
-            {from:"fullName",to:"Nom complet"} 
+            // {from:"id",to:"Identifiant"}
+            // ,{from:"brand",to:"Marque"}
+            // ,{from:"family",to:"Famille"}
+            // ,{from:"model",to:"Modèle"}
+            // ,{from:"ghz",to:"Fréquence (Ghz)"},
+            {from:"price",to:"Prix"}
+            // ,{from:"fullName",to:"Nom complet"} 
         ]
         for(let t of translate){
             for(let th of this.thead){
